@@ -4,11 +4,14 @@ Jack's technology interests include Python, the Django project, HTMX, GIS, graph
 
 Outside of coding, Jack serves as a Marine Corps Officer, solves unusual math and logic problems, and makes a mess in the kitchen.
 
-Email: jack@watervize.com
-Twitter: https://twitter.com/JackDLinke
-Website (personal): https://www.jacklinke.com
-Website (Watervize): https://www.watervize.com
 Open Source Projects:
-    https://github.com/OmenApps/django-postgresql-dag - Directed Acyclic Graphs with a variety of methods for both Nodes and Edges, and multiple exports
-    https://github.com/OmenApps/django-calendardate - A Django calendar model with date metadata for querying against
-    https://github.com/jacklinke/django-htmx-todo-list - An example of todo list application using Django and HTMX
+
+- [django-postgresql-dag](https://github.com/OmenApps/django-postgresql-dag) - *Directed Acyclic Graphs with a variety of methods for both Nodes and Edges, and multiple exports*
+- [django-calendardate](https://github.com/OmenApps/django-calendardate) - *A Django calendar model with date metadata for querying against*
+- [django-htmx-todo-list](https://github.com/jacklinke/django-htmx-todo-list) - *An example of todo list application using Django and HTMX*
+
+
+    Email: jack@watervize.com
+    Twitter: https://twitter.com/JackDLinke
+    Website (personal): https://www.jacklinke.com
+    Website (Watervize): https://www.watervize.com
