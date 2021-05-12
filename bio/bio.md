@@ -10,8 +10,12 @@ Open Source Projects:
 - [django-calendardate](https://github.com/OmenApps/django-calendardate) - *A Django calendar model with date metadata for querying against*
 - [django-htmx-todo-list](https://github.com/jacklinke/django-htmx-todo-list) - *An example of todo list application using Django and HTMX*
 
+---
 
-    Email: jack@watervize.com
-    Twitter: https://twitter.com/JackDLinke
-    Website (personal): https://www.jacklinke.com
-    Website (Watervize): https://www.watervize.com
+>    Email: jack@watervize.com
+>    
+>    Twitter: https://twitter.com/JackDLinke
+>    
+>    Website (personal): https://www.jacklinke.com
+>    
+>    Website (Watervize): https://www.watervize.com
