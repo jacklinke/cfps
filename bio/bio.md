@@ -1,5 +1,14 @@
-Jack loves learning and sharing insights with others through blogging, tweets, and speaking engagements. His technology interests include Python, the Django web framework, HTMX, GIS, graph theory, and data storytelling & visualization. He is a frequent contributor to the open source community.
+Jack Linke tends to learn the hard way - and shares the lessons from those experiences with others through blogging, tweets, and speaking engagements. He has been developing software and hardware projects off-and-on for most of his life, but much of his relevant web development experience has been hard-earned over the past four years during development of Watervize - a B2B2B SaaS web application to help irrigation water utility companies improve efficiency, analysis, and communication with staff and agriculture customers.
 
-Jack has been developing software and hardware projects off-and-on for most of his life, but has been particularly focused on programming and web application development over the past four years while developing Watervize - a web application to help irrigation water utilities improve efficiency, analysis, and communication with staff and customers.
+Jack's technology interests include Python, the Django project, HTMX, GIS, graph theory, and data storytelling & visualization. He is a frequent contributor to the open source community and a contributing member of the Python Software Foundation.
 
-Outside of his work coding, Jack serves as a Marine Corps Officer, and enjoys cycling, hiking, traveling, and solving unusual math and logic problems.
+Outside of coding, Jack serves as a Marine Corps Officer, solves unusual math and logic problems, and makes a mess in the kitchen.
+
+Email: jack@watervize.com
+Twitter: https://twitter.com/JackDLinke
+Website (personal): https://www.jacklinke.com
+Website (Watervize): https://www.watervize.com
+Open Source Projects:
+    https://github.com/OmenApps/django-postgresql-dag - Directed Acyclic Graphs with a variety of methods for both Nodes and Edges, and multiple exports
+    https://github.com/OmenApps/django-calendardate - A Django calendar model with date metadata for querying against
+    https://github.com/jacklinke/django-htmx-todo-list - An example of todo list application using Django and HTMX
