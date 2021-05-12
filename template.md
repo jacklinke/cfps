@@ -1,21 +1,35 @@
 # Title
 
-### Abstract
+## Abstract
 
-This is the abstract - a succinct paragraph or two about what will be discussed, and why it should matter to the audience.
+One to three succinct paragraphs about what will be discussed, and why it should matter to the audience.
 
-### Format
+## Audience
 
-- Length of talk
-- Equipment or resources needed for the talk
+- Who is this talk geared toward?
+- What interests, level of experience, and prior knowledge should attendees be expected to have?
 
-### Roadmap
+## Objectives
 
-- Topics
-- To
-- Be
-- Discussed
+By the end of this tutorial, you will be able to...
 
-### Outcomes
+1. ...
+2. ...
 
 What knowledge, materials, or homework will the audience leave with?
+
+## Outline
+
+1. Introduction (3 minutes)
+2. The first topic (X minutes)
+    - Breakdown of the topic
+    - More details
+3. Another topic (X minutes)
+4. Conclusion and next steps (3 minutes)
+
+## Notes
+
+- Equipment or resources needed for the talk
+- Address potential similarity to previous talks, and what distinguishes this one
+- Reference articles, source code repos, blog posts, videos, or any other resources that add context
+- Past experience with this topic and with public speaking. Links to video, if available
