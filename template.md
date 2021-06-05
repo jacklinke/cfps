@@ -1,10 +1,10 @@
 # Title
 
-## Abstract
+## Abstract / Elevator Pitch (300 characters)
 
 One to three succinct paragraphs about what will be discussed, and why it should matter to the audience.
 
-## Audience
+## Audience Level
 
 - Who is this talk geared toward?
 - What interests, level of experience, and prior knowledge should attendees be expected to have?
@@ -33,3 +33,7 @@ What knowledge, materials, or homework will the audience leave with?
 - Address potential similarity to previous talks, and what distinguishes this one
 - Reference articles, source code repos, blog posts, videos, or any other resources that add context
 - Past experience with this topic and with public speaking. Links to video, if available
+
+## Tags
+
+    one, two
