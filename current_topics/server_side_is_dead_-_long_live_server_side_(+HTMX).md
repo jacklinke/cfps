@@ -10,10 +10,40 @@ With no 'standard' approach to front-end other than the built-in templating and 
 
 ## Objectives
 
+By the end of this talk, audience members will have a better understanding of what HTMX is, will understand concrete examples of how it can be applied to their django projects, and will have a list of resources for further learning and discussion.
+
 ## Outline
+
+- The current state (x min)
+    - 
+    - Complicated 
+
+- A different mindset (x min)
+    - Getting back to the heart of HATEOAS
+    - Splitting up complicated views
+    - 
+
+- A few examples (x min)
+    - Messaging inbox functionality (read, archive)
+        - The default Django approach
+        - Django + HTMX approach
+    - One-click settings
+        - The default Django approach
+        - Django + HTMX approach
+    - Multiple forms in multiple tabs
+        - The default Django approach
+        - Django + HTMX approach
+
+- Tips, best practices, and pitfalls (x min)
+    - CSRF Tokens
+    - 
+
+- Conclusion
 
 ## Notes
 
+Format: 35 minute talk
+
 ## Tags
 
-    Django, HTMX, Ajax, front-end, javascript, web, tools, ux
+    Django, HTMX, Ajax, front-end, javascript, web, tools, user experience, beginner
