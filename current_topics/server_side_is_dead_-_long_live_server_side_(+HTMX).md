@@ -14,16 +14,16 @@ By the end of this talk, audience members will have a better understanding of wh
 
 ## Outline
 
-- The current state (x min)
-    - 
-    - Complicated 
+- The current state (5 min)
+    - Django templates
+    - Ajax, transitions, and asynchronous front end approaches
+    - Heavy JS Frameworks (Vue, React, jQuery)
 
-- A different mindset (x min)
+- A different mindset (9 min)
     - Getting back to the heart of HATEOAS
     - Splitting up complicated views
-    - 
 
-- A few examples (x min)
+- A few examples (15 min)
     - Messaging inbox functionality (read, archive)
         - The default Django approach
         - Django + HTMX approach
@@ -34,11 +34,11 @@ By the end of this talk, audience members will have a better understanding of wh
         - The default Django approach
         - Django + HTMX approach
 
-- Tips, best practices, and pitfalls (x min)
+- Tips, best practices, and pitfalls (6 min)
     - CSRF Tokens
-    - 
-
-- Conclusion
+    - Lightweight JS libraries which compliment HTMX
+    - Simplifying things with django-htmx
+    - Resources for further reading and community
 
 ## Notes
 
