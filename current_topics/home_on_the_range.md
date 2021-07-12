@@ -1,6 +1,5 @@
 
-
-# Home on the range
+# Home on the range - getting comfortable with ranges and range fields in django
 
 ## Abstract / Elevator Pitch (300 characters)
 
@@ -29,7 +28,7 @@ Range visualization for concrete understanding (10 min)
         - Contained By
         - Comparisons (fully_lt, fully_gt, etc)
 
-We will build out a Swimming Pool Resource Scheduler project that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. Among other things, the project will be used to perform the following tasks (2.25 hrs)
+We will build out a Swimming Pool Resource Scheduler project that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. Among other things, the project will be used to perform the following tasks (2.5 hrs)
 
     - Access the lower and upper values of a DateTimeRangeField in the model instance
     - Get reservations that start at a specific datetime
