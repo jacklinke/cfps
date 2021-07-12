@@ -1,8 +1,9 @@
+
 # Server-Side is Dead! Long Live Server-Side (+ HTMX)
 
 ## Abstract / Elevator Pitch (300 characters)
 
-With no 'standard' approach to front-end other than the built-in templating and so many JS frontend frameworks and tools and options, it's easy to get thrown for a loop. HTMX lets us stick to what django is good at - server-side stuff, mainly - without feeling like we're missing out on modern tools.
+With no 'standard' approach to front-end other than the built-in templating and so many JS front-end frameworks and tools and options, it's easy to get thrown for a loop. HTMX lets us stick to what django is good at - server-side stuff, mainly - without feeling like we're missing out on modern tools.
 
 ## Audience Level
 
@@ -23,14 +24,17 @@ By the end of this talk, audience members will have a better understanding of wh
     - Getting back to the heart of HATEOAS
     - Splitting up complicated views
 
-- A few examples (15 min)
-    - Messaging inbox functionality (read, archive)
+- Feature and approach walk-throughs (20 min)
+    1. Messaging inbox functionality (read, archive)
         - The default Django approach
         - Django + HTMX approach
-    - One-click settings
+    2. One-click settings
         - The default Django approach
         - Django + HTMX approach
-    - Multiple forms in multiple tabs
+    3. Multiple forms in multiple tabs
+        - The default Django approach
+        - Django + HTMX approach
+    4. Formsets and an HTMX approach
         - The default Django approach
         - Django + HTMX approach
 
@@ -42,7 +46,7 @@ By the end of this talk, audience members will have a better understanding of wh
 
 ## Notes
 
-Format: 35 minute talk
+Format: 40 minute talk
 
 ## Tags
 
