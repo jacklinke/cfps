@@ -2,7 +2,9 @@ Jack Linke tends to learn the hard way - and shares the lessons from those exper
 
 Jack's technology interests include Python, the Django project, HTMX, GIS, graph theory, data storytelling, and visualization. He is a frequent contributor to the open source community and a contributing member of the Python Software Foundation.
 
-Outside of coding, Jack serves as a Marine Corps Officer, solves unusual math and logic problems, and makes a mess in the kitchen.
+His speaking experience includes briefing Generals on topics ranging from budgets to technical concepts, instructing at formal training centers, providing software demonstrations and feature walk-throughs, and he is a Weapons and Tactics Instructor (WTI) as while serving as a Marine Corps Officer.
+
+Outside of coding, Jack solves unusual math and logic problems, and makes a mess in the kitchen.
 
 Open Source Projects:
 
