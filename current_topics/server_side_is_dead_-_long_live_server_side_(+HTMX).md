@@ -50,6 +50,9 @@ By the end of this talk, audience members will have a better understanding of wh
 
 Format: 40 minute talk
 
+I have been fortunate to work with htmx since shortly after its inception. Since then I have integrated it into several features of a moderate sized commercial django-based SaaS application. I have also written a blog post with an [example implementation](https://jacklinke.com/ajax-enabled-checkbox-and-select-with-django-and-htmx) of htmx with django for building an interactive settings page, have created an [example to-do list app](https://github.com/jacklinke/django-htmx-todo-list) using django and htmx, and actively take part in conversations about django and htmx on the htmx Discord, on Reddit, and on Twitter.
+
+
 ## Tags
 
-    Django, HTMX, Ajax, front-end, javascript, web, tools, user experience, beginner
+    Django, HTMX, Ajax, front-end, javascript, web, tools, user experience, beginner, ux
