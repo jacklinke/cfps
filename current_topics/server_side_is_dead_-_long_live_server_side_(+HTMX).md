@@ -25,6 +25,8 @@ By the end of this talk, audience members will have a better understanding of wh
     - Splitting up complicated views
 
 - Feature and approach walk-throughs (20 min)
+  For a variety of common web application features, we will take a look at a typical django approach and how one might approach the problem with django + htmx.
+
     1. Messaging inbox functionality (read, archive)
         - The default Django approach
         - Django + HTMX approach
