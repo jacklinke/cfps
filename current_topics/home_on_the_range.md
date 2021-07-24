@@ -11,7 +11,7 @@ Building complex queries with individual `start` and `end` fields is inconvenien
 
 ## Objectives
 
-Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning.
+Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources will include a link to a GitHub repository containing all of the examples from the tutorial.
 
 ## Outline
 
@@ -28,13 +28,16 @@ Range visualization for concrete understanding (10 min)
     - Contained By
     - Comparisons (fully_lt, fully_gt, etc)
 
+A before-and-after look (10 min)
+- We will go over a few side-by-side examples of queries using distinct start and end values vs. ranges to highlight the benefits
+
 We will build out a Swimming Pool Resource Scheduler project that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. (2.5 hrs)
 
 The initial model layout can be visualized in the following diagram:
 
 ![](https://lucid.app/publicSegments/view/8031b83b-fde9-48d8-a812-ae249f283690/image.png)
 
-The initial models.py file is:
+The initial (stripped down) models.py file using distinct lower and upper values is:
 
 ```python
 Pool models
@@ -48,7 +51,8 @@ class Pool(models.Model):
 
     name = models.CharField(_("Pool Name"), max_length=100)
     address = models.TextField(_("Address"))
-    depth_range = models.IntegerRangeField(_("Depth Range"), help_text=_("Whatis the range in depth (shallow to deep) for this pool?"))
+    depth_minimum = models.IntegerField(_("Depth Minimum"), help_text=_("What is the depth in feet of the shallow end of this pool?"))
+    depth_maximum = models.IntegerField(_("Depth Maximum"), help_text=_("What is the depth in feet of the deep end of this pool?"))
     
     class Meta:
         verbose_name = _("Pool")
@@ -59,8 +63,13 @@ class Closure(models.Model):
     """A way of recording dates that a pool is closed"""
 
     pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name="closures")
-    dates = models.DateRangeField(_("Pool Closure Dates"))
+    start_date = models.DateField(_("Pool Closure Start Date"))
+    end_date = models.DateField(_("Pool Closure End Date"))
     reason = models.TextField(_("Closure Reason"))
+    
+    class Meta:
+        verbose_name = _("Closure")
+        verbose_name_plural = _("Closures")
 
 
 class Lane(models.Model):
@@ -69,7 +78,7 @@ class Lane(models.Model):
     name = models.CharField(_("Lane Name"), max_length=50)
     pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name="lanes")
     max_swimmers = models.PositiveSmallIntegerField(_("Maximum Swimmers"), )
-    per_hour_cost = models.DecimalField(max_digits=5, decimal_places=2)
+    per_hour_cost = models.DecimalField(_("Per-Hour Cost"), max_digits=5, decimal_places=2)
 
     class Meta:
         verbose_name = _("Lane")
@@ -82,7 +91,93 @@ class Locker(models.Model):
     # Using CharField, because sometimes locker number might be "A23" or "56-B"
     number = models.CharField(_("Locker Number"), max_length=20)
     pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name="lockers")
-    per_hour_cost = models.DecimalField(max_digits=5, decimal_places=2)
+    per_hour_cost = models.DecimalField(_("Per-Hour Cost"), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _("Locker")
+        verbose_name_plural = _("Lockers")
+
+
+class LaneReservation(models.Model):
+    """A lane reservations defines a set of users, a period of time, and a pool lane"""
+
+    users = models.ManyToManyField(User, related_name="lane_reservations")
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name="lane_reservations")
+    period_start = models.DateTimeField(_("Reservation Period Start"))
+    period_end = models.DateTimeField(_("Reservation Period End"))
+
+    class Meta:
+        verbose_name = _("Lane Reservation")
+        verbose_name_plural = _("Lane Reservations")
+    
+
+class LockerReservation(models.Model):
+    """A locker reservation defines a user, a period of time, and a pool locker"""
+
+    user = models.ForeignKey(User, related_name="locker_reservations")
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name="locker_reservations")
+    period_start = models.DateTimeField(_("Reservation Period Start"))
+    period_end = models.DateTimeField(_("Reservation Period End"))
+
+    class Meta:
+        verbose_name = _("Locker Reservation")
+        verbose_name_plural = _("Locker Reservations")
+
+```
+
+The final (stripped down) models.py with ranges is:
+
+```python
+Pool models
+
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
+
+class Pool(models.Model):
+    """An instance of a Pool. Multiple pools may exist within the municipality"""
+
+    name = models.CharField(_("Pool Name"), max_length=100)
+    address = models.TextField(_("Address"))
+    depth_range = models.IntegerRangeField(_("Depth Range"), help_text=_("What is the range in feet for the depth of this pool (shallow to deep)?"))
+    
+    class Meta:
+        verbose_name = _("Pool")
+        verbose_name_plural = _("Pools")
+
+
+class Closure(models.Model):
+    """A way of recording dates that a pool is closed"""
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name="closures")
+    dates = models.DateRangeField(_("Pool Closure Dates"))
+    reason = models.TextField(_("Closure Reason"))
+    
+    class Meta:
+        verbose_name = _("Closure")
+        verbose_name_plural = _("Closures")
+
+
+class Lane(models.Model):
+    """Each pool may have multiple lanes, each of which can be reserved by multiple people"""
+
+    name = models.CharField(_("Lane Name"), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name="lanes")
+    max_swimmers = models.PositiveSmallIntegerField(_("Maximum Swimmers"), )
+    per_hour_cost = models.DecimalField(_("Per-Hour Cost"), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _("Lane")
+        verbose_name_plural = _("Lanes")
+
+
+class Locker(models.Model):
+    """Each pool may have multiple lockers, each of which can be reserved by only one person at a time"""
+
+    # Using CharField, because sometimes locker number might be "A23" or "56-B"
+    number = models.CharField(_("Locker Number"), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name="lockers")
+    per_hour_cost = models.DecimalField(_("Per-Hour Cost"), max_digits=5, decimal_places=2)
 
     class Meta:
         verbose_name = _("Locker")
@@ -147,9 +242,6 @@ We will use the models in this project to perform many of the following tasks:
 - Similarly, annotate the minimum Lower and maximum Lower reservations dates for all reservations in a queryset
 - Assuming each reservation is associated with a Resource, annotate Resources with the most recently ending reservation (similar for most recent starting or longest-ago starting/ending reservation)
 - Multiple ways of saving a model instance with DateTimeRangeField
-
-A before-and-after look (10 min)
-- We will go over a few side-by-side examples of queries using distinct start and end values vs. ranges to highlight the benefits
 
 Resources (5 min)
 - Django docs
