@@ -8,6 +8,8 @@ Outside of coding, Jack solves unusual math and logic problems, and makes a mess
 
 Open Source Projects:
 
+- [django-generate-series](https://github.com/jacklinke/django-generate-series) - *Makes it easier to use Postgres' generate_series to create sequences with Django's ORM*
+- [django-model-info](https://github.com/jacklinke/django-model-info) - *Provides a Django Management Command for displaying details about your project's models such as listing model fields, relations, methods, and more*
 - [django-postgresql-dag](https://github.com/OmenApps/django-postgresql-dag) - *Directed Acyclic Graphs with a variety of methods for both Nodes and Edges, and multiple exports*
 - [django-calendardate](https://github.com/OmenApps/django-calendardate) - *A Django calendar model with date metadata for querying against*
 - [django-htmx-todo-list](https://github.com/jacklinke/django-htmx-todo-list) - *An example of todo list application using Django and HTMX*
