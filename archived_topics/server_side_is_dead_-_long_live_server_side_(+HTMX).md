@@ -56,3 +56,7 @@ I have been fortunate to work with htmx since shortly after its inception. Since
 ## Tags
 
     Django, HTMX, Ajax, front-end, javascript, web, tools, user experience, beginner, ux
+
+## Link to the actual talks that were given based on this CFP
+
+[htmx-talk-2021](https://github.com/jacklinke/htmx-talk-2021)
