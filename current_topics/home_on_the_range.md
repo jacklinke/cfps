@@ -1,27 +1,28 @@
-
 # Home on the range with Django - getting comfortable with ranges and range fields
 
 ## Abstract / Elevator Pitch (300 characters)
 
-Building complex queries with individual `start` and `end` fields is inconvenient, inefficient, and not very effective, but working with ranges is a topic that is often glossed over. We will work through an example project that demonstrates the wide variety of using and querying with ranges.
+Building complex range-based queries with individual `start` and `end` fields is inconvenient, inefficient, and does not make use of the expressiveness available in Postgres' range fields - but working with ranges is a topic that is often glossed over.
+
+We will work through examples in a project demonstrating the way to use and query with ranges. The audience will receive link to the example code and a cheatsheet for working with ranges.
 
 ## Audience Level
 
-Intermediate - Participants should already be familiar with building projects in django.
+Intermediate to advanced - Participants should already be familiar with building projects in django.
 
 ## Objectives
 
-Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources will include a link to a GitHub repository containing all of the examples from the tutorial.
+Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources will include a link to a GitHub repository containing the examples from the talk, additional examples, and a cheatsheet for working with ranges.
 
 ## Outline
 
-The naive approach to ranges (5 min)
+The naive approach to ranges (2 min)
 
 - Using separate start and stop model fields
 - Querying with start and stop values
-- It quickly gets complicated
+- Quickly gets complicated
 
-Range visualization for concrete understanding (10 min)
+Range visualization for concrete understanding (3 min)
 
 - Terminology
     - Inclusive vs Exclusive
@@ -30,18 +31,17 @@ Range visualization for concrete understanding (10 min)
     - Contained By
     - Comparisons (fully_lt, fully_gt, etc)
 
-A before-and-after look (10 min)
+![](https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png)
 
-- We will go over a few side-by-side examples of queries using distinct start and end values vs. ranges to highlight the benefits
+A before-and-after look at the models (5 min)
 
-We will build out a Swimming Pool Resource Scheduler project that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. (2.5 hrs)
-
-The initial model layout can be visualized in the following diagram:
+The example project is a Swimming Pool Resource Scheduler that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. The model layout can be visualized in the following diagram:
 
 ![](https://lucid.app/publicSegments/view/8031b83b-fde9-48d8-a812-ae249f283690/image.png)
 
-The initial (stripped down) models.py file using distinct lower and upper values is:
+We will look at the models before and after using range fields.
 
+The initial (stripped down) models.py file using distinct lower and upper values is:
 
     from django.db import models
     from django.utils.translation import ugettext_lazy as _
@@ -125,8 +125,7 @@ The initial (stripped down) models.py file using distinct lower and upper values
             verbose_name_plural = _("Locker Reservations")
 
 
-
-The final (stripped down) models.py with ranges is:
+The final (stripped down) models.py with range fields is:
 
     from django.db import models
     from django.utils.translation import ugettext_lazy as _
@@ -206,7 +205,9 @@ The final (stripped down) models.py with ranges is:
             verbose_name_plural = _("Locker Reservations")
 
 
-We will use the models in this project to perform many of the following tasks:
+Example Project Walkthrough (30 min)
+
+The models in this project will be used to demonstrate the following tasks in django views:
 
 - Set constraints for the various range fields
 - Access the lower and upper values of a range fields in views and templates
@@ -245,12 +246,14 @@ Resources (5 min)
 - Django docs
 - The django source code and tests
 - PostgreSQL docs on ranges
+- Example project GitHub repo
+- Django ranges cheatsheet
 
 ## Notes
 
 Ranges (in queries and models) are something I struggled with for a long time. After starting out using lots of `start` and `end` fields in my projects, I found that they result in a lot more complication down the road, especially if you are trying to perform more advanced queries. Ranges seemed overly complicated for a long time. I had to do a lot of research to master working with ranges, and I hope to keep others from this misery. Now I use ranges in dozens of places in my own projects. In this talk, I will work through an example project that demonstrates a number of approaches to working with ranges, a topic that is often glossed over. 
 
-Format: 3 hour tutorial
+Format: 45 min deep dive talk
 
 ## Tags
 
