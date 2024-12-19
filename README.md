@@ -4,7 +4,7 @@ Proposed and previously-conducted talks and workshops
 
 ## Current
 
-- [Troubleshooting is a Lifestyle 😎](https://github.com/jacklinke/cfps/blob/main/current_topics/troubleshooting_is_a_lifestyle.md
+- [Troubleshooting is a Lifestyle 😎](https://github.com/jacklinke/cfps/blob/main/current_topics/troubleshooting_is_a_lifestyle.md)
 
 ## Archived
 
