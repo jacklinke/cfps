@@ -1,5 +1,105 @@
 # Troubleshooting is a Lifestyle 😎
 
+Updated version for PyCon 2025
+
+# Abstract:
+
+Troubleshooting isn’t just a skill - it’s a *mindset*, and in the world of Python, it’s a superpower. Whether you’re unraveling a runtime bug, optimizing a data pipeline, or resolving a tricky dependency conflict, the ability to systematically identify, isolate, and resolve problems is invaluable. But effective troubleshooting doesn’t happen by accident - it’s a practice you can learn and develop.
+
+In this talk, we’ll explore how to approach troubleshooting Python as a structured, repeatable process, but much of the advice applies to troubleshooting anything you might encounter. You’ll learn to:
+
+- Identify and leverage built-in indicators, like exceptions, stack traces, and logging.
+- Break down big problems into manageable pieces with tools like `pdb`, `logging`, and the REPL.
+- Avoid common pitfalls like tunnel vision and fixed assumptions by stepping back and reassessing.
+- Ask for help effectively, using clear context and minimal reproducible examples (MREs).
+- Document your troubleshooting process for present clarity and future insights.
+
+This talk isn’t about memorizing fixes for specific bugs—it’s about equipping yourself with a universal troubleshooting framework, informed by Python’s powerful and accessible ecosystem. Whether you’re a beginner learning the ropes or a seasoned developer refining your craft, you will come away from the talk equipped with troubleshooting tools you can use.
+
+# Reviewer Notes:
+- The content of the talk is based on real-world troubleshooting experiences and best practices. I have experienced troubleshooting in electronics design, as a radar technician, in programming for most of my life, and in a number of other facets throughout my life.
+- The goal of this talk is to equip participants with practical troubleshooting skills that they can apply in their professional and personal lives.
+- While beginners and intermediate programmers will probably gain the most from my talk, I have found that some of the things I discuss may give experienced programmers new ways to look at troubleshooting, or remind them of things they may be overlooking as they work through problems.
+
+# Talk Outline:
+
+Troubleshooting is a Lifestyle 😎
+
+1. Introduction (1 min)
+    - My background in electronics design, radar maintenance, and software development
+
+2. Setting Goals for the Talk (2 min)
+   - Manage Expectations:
+     - Like any skill, you won't learn everything about troubleshooting here in 30 minutes.
+     - Goal: Equip attendees with principles and tools applicable across domains.
+   - Why Troubleshooting Matters.
+
+3. Foundations of Troubleshooting (4 min)
+   - Terminology
+     - Problem-solving: General conceptual problem-solving.
+     - Troubleshooting: Subset of problem-solving for specific issues.
+       - Recognizing.
+       - Locating.
+       - Resolving.
+     - Debugging: Troubleshooting applied to software.
+   - Troubleshooting as a Mindset
+     - Not just a skill but a lifestyle.
+     - Examples from medicine, aviation, tech.
+   - Importance of Persistence and Curiosity.
+
+4. Indicators and Resources (6 min)
+   - Importance of Indicators
+     - Quote: "If your only tool is a hammer..."
+     - Categories:
+       - Built-ins vs. Extras.
+       - Alert vs. Status.
+       - Qualitative vs. Quantitative.
+   - Examples of various indicators
+   - Indicators for Python
+     - Built-in: Logging, exceptions, stack traces.
+     - Extras: Profilers, linters, and static analysis tools.
+
+5. Breaking Down Problems (5 min)
+   - The Power of Isolating Variables
+   - Simplify complex Python systems:
+     - Modules and packages.
+     - Class-based abstractions.
+   - Strategies for Dissecting Issues
+
+6. Avoiding Tunnel Vision (4 min)
+   - Recognizing Tunnel Vision
+   - Strategies
+     - Step back and reassess.
+     - Seek alternative perspectives.
+
+7. Asking for Help (5 min)
+   - Effective Help Requests
+     - Context and specificity.
+     - Minimal Reproducible Example (MRE).
+   - Knowing When to Seek Help
+   - Where to Get Help
+
+8. Documenting the Process (2 min)
+   - Why Document? Benefits for current and future troubleshooting.
+   - How to Document
+     - Problem statement.
+     - Attempts made.
+     - Outcomes and next steps.
+   - Use Python tools:
+     - Structured logs with `logging`.
+     - Reports using `pytest`.
+
+9. Conclusion (1 min)
+   - Summarize Key Takeaways
+   - Final Thoughts
+   - Encourage attendees to embrace troubleshooting in all areas of life.
+
+---
+
+# Troubleshooting is a Lifestyle 😎
+
+Original for DjangoCon US 2024
+
 ## Abstract / Elevator Pitch (300 characters)
 
 Troubleshooting isn't just a job skill - it's a way of life. The skill of effective troubleshooting opens doors and can help you solve problems in any field. In this comprehensive talk on problem-solving you'll Learn how to break down complex issues, utilize the tools at your disposal, and avoid tunnel vision, whether you are working on a django project or just about anything else.
